@@ -479,6 +479,7 @@ a:focus {
   }
   .tech-grid {
     justify-content: center;
+    gap: 20px;
   }
   .gallery {
     flex-direction: column;
@@ -487,22 +488,13 @@ a:focus {
     width: 100%;
     max-width: 420px;
   }
-  /* Ajustes responsivos para o grid de tecnologias */
-  .tech-grid {
-    gap: 20px;
-  }
   .tech-grid span {
     flex: 1 1 calc(50% - 12px);
     max-width: calc(50% - 12px);
     text-align: center;
     padding: 8px 10px;
   }
-  @media (max-width: 560px) {
-    .tech-grid span {
-      flex-basis: 100%;
-      max-width: 100%;
-    }
-  }
+
   /* Ajustes responsivos para botões em telas pequenas */
   .btn {
     display: block;
@@ -524,6 +516,18 @@ a:focus {
     max-width: none;
     width: 100%;
     margin: 8px 0;
+  }
+}
+
+/* Media query separada para telefones muito pequenos: empilha chips/tech-grid */
+@media (max-width: 420px) {
+  .tech-grid {
+    gap: 12px;
+    justify-content: center;
+  }
+  .tech-grid span {
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
 
