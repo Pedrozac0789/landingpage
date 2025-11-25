@@ -134,6 +134,7 @@ body {
 
 .btn {
   display: inline-block;
+  position: relative;
   background: linear-gradient(90deg, var(--primary), var(--primary-2));
   color: white;
   padding: 12px 26px;
@@ -241,6 +242,14 @@ a:focus {
   outline-offset: 3px;
 }
 
+.tech-grid {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 12px;
+}
 .tech-grid span {
   background: linear-gradient(180deg, #fff, #fbfdff);
   color: var(--primary);
@@ -250,6 +259,7 @@ a:focus {
   box-shadow: var(--card-shadow);
   transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
   border: 1px solid rgba(124, 58, 237, 0.06);
+  flex: 0 1 auto;
 }
 .tech-grid span:hover {
   transform: translateY(-6px) scale(1.02);
@@ -476,6 +486,44 @@ a:focus {
   .gallery img {
     width: 100%;
     max-width: 420px;
+  }
+  /* Ajustes responsivos para o grid de tecnologias */
+  .tech-grid {
+    gap: 10px;
+  }
+  .tech-grid span {
+    flex: 1 1 calc(50% - 12px);
+    max-width: calc(50% - 12px);
+    text-align: center;
+    padding: 8px 10px;
+  }
+  @media (max-width: 360px) {
+    .tech-grid span {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
+  /* Ajustes responsivos para botões em telas pequenas */
+  .btn {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    margin: 12px auto;
+    padding: 12px 18px;
+    font-size: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    white-space: normal;
+  }
+  /* Hero: limitar largura do botão principal para não ficar excessivamente largo */
+  .hero .btn {
+    max-width: 360px;
+  }
+  /* Rodapé: empilhar e ocupar largura total para facilitar tocabilidade */
+  .footer .btn {
+    max-width: none;
+    width: 100%;
+    margin: 8px 0;
   }
 }
 
