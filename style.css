@@ -489,7 +489,7 @@ a:focus {
   }
   /* Ajustes responsivos para o grid de tecnologias */
   .tech-grid {
-    gap: 10px;
+    gap: 20px;
   }
   .tech-grid span {
     flex: 1 1 calc(50% - 12px);
