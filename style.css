@@ -497,7 +497,7 @@ a:focus {
     text-align: center;
     padding: 8px 10px;
   }
-  @media (max-width: 360px) {
+  @media (max-width: 560px) {
     .tech-grid span {
       flex-basis: 100%;
       max-width: 100%;
